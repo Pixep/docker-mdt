@@ -7,7 +7,7 @@ IMAGE_TAG = $(DOCKER_REGISTRY)/$(IMAGE_ORG)/$(IMAGE_NAME):$(IMAGE_VERSION)
 WORKING_DIR := $(shell pwd)
 DOCKERFILE_DIR := $(WORKING_DIR)
 DOCKER_RUN_CMD := @docker run \
-			-it --rm --network host -v ${HOME}/.config:/root/.config \
+			-it --rm --network host -v ${HOME}/.config/mdt:/root/.config/mdt \
 			$(DOCKER_REGISTRY)/$(IMAGE_ORG)/$(IMAGE_NAME):$(IMAGE_VERSION)
 
 .DEFAULT_GOAL := run
