@@ -23,3 +23,12 @@ docker run -it --rm --network host -v ${HOME}/.config/mdt:/root/.config/mdt aler
 docker run -it --rm --network host -v ${HOME}/.config/mdt:/root/.config/mdt aleravat/mendel-development-tool mdt <command>
 ```
 
+## Shorter version
+
+By cloning this repository, you can also use the shorter syntax, based on `make`.
+
+This includes:
+* `make` or `make run` to run an interactive Bash with `mdt` support
+* `make devices` to scan for devices
+* `make shell` to connect directly to a single device
+
